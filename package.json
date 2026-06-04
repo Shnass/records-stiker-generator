@@ -4,6 +4,9 @@
   "main": "src/app.js",
   "type": "module",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --env-file=.env ./src/app.js",
+    "build:css": "sass src/public/scss:src/public/css --no-source-map",
     "watch:css": "sass --watch src/public/scss:src/public/css",
     "watch:server": "nodemon --ignore ./src/labels.json --env-file=.env ./src/app.js",
     "dev": "concurrently 'npm run watch:server' 'npm run watch:css'"

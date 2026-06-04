@@ -20,8 +20,7 @@ html
                       small (#{card.year})
                     .release-country
                       | #{card.label ? card.label.name : 'Unknown'}
-                      | |
-                      | #{card.styles}
+                    .release-genre #{card.styles}
                   .release-price
                     span #{card.price}
                     em #{card.position}

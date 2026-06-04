@@ -247,7 +247,7 @@
     }
 
     body {
-      overflow: hidden;
+      /* overflow: hidden; */
     }
 
     .fields {

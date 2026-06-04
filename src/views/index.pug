@@ -8,8 +8,9 @@ html
             h1= message
             p= text
             form(action="/fetch" method="post")
-                label(for="store") Enter store name:
-                input(type="text" id="store" name="store" required)
+                //label(for="store") Enter store name:
+                //input(type="text" id="store" name="store" required)
+                input(type="hidden" id="store" name="store" value="entrall" required)
                 br
                 label(for="qty") Enter quantity:
                 input(type="text" id="qty" name="qty" required)

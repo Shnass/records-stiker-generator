@@ -2,6 +2,20 @@
     width: 33.3333%;
     height: 3.7125cm;
     text-transform: none;
+    position:relative;
+    overflow:hidden;
+}
+
+.release-card:before{
+    background: url(../img/entral.svg);
+    background-repeat: space;
+    position: absolute;
+    width: 200%;
+    height: 250%;
+    transform: rotate(-25deg) translateX(-10%) translateY(10%);
+    content: '';
+    opacity: 0.1;
+    transform-origin: 0 0;
 }
 
 
@@ -13,7 +27,16 @@
     text-align: center;
     background: #eee;
     border: 0;
-    font-size: 30px;
+    font-size: 24px;
+}
+
+.release-name-complex{
+    position: relative;
+    z-index: 2;
+}
+
+.release-genre{
+    margin-top: auto;
 }
 
 .release-price em{
@@ -48,7 +71,21 @@
 }
 
 .release-artist{
-    font-size: 1.4rem;
+    font-size: 0.9rem;
     margin-bottom: 0.3em;
 }
+.release-card:nth-child(16n) {
+    page-break-after: auto;
+}
 
+.release-card:nth-child(24n) {
+    page-break-after: always;
+}
+
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important; 
+    print-color-adjust: exact !important;         
+  }
+}

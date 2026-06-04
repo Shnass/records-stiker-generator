@@ -209,7 +209,7 @@ export async function releaseCard(id, artist, title, price, styles, country, yea
 export async function processInventory(store, qty){
     console.log(`Starting processing inventory for store: ${store} with quantity: ${qty}`);
     if(store.toLowerCase() === 'entrall'){
-        await getCollectionNotes(store);
+        //await getCollectionNotes(store);
     }
     
     const cards = [];

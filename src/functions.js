@@ -167,7 +167,7 @@ export async function getLabelLogo(label) {
         const labelData = await labelResponse.json();
         const image = labelData.images ? labelData.images[0].uri : null;
         labelsCache.push({ id: labelId, src: image });
-        await fs.promises.writeFile('./src/labels.json', JSON.stringify(labelsCache, null, 4));
+        //await fs.promises.writeFile('./src/labels.json', JSON.stringify(labelsCache, null, 4));
         await rateLimitPrevent();
         return image;
     }
@@ -222,6 +222,6 @@ export async function processInventory(store, qty){
         cards.push(...releases)
     }
 
-    await fs.promises.writeFile(path.join(__dirname, collectionCacheFile), JSON.stringify(collectionCache, null, 4));
+    //await fs.promises.writeFile(path.join(__dirname, collectionCacheFile), JSON.stringify(collectionCache, null, 4));
     return cards;
 }

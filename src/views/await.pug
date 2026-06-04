@@ -9,7 +9,7 @@ html
       const store = "#{store}";
       const qty = #{qty};
 
-      fetch('/process', {
+      fetch('/api/process', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ store, qty })

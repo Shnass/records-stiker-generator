@@ -1,14 +1,11 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';    
-import { processInventory } from './functions.js';
+import { processInventory } from '../functions.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
 const viewsPath = path.join(__dirname, 'views');
-const PORT = 3833;
-
-
 
 app.set('view engine', 'pug')
 app.set('views', viewsPath);
